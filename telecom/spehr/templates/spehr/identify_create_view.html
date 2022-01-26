@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+<form  class="empform1" method="post">
+  {% csrf_token %}
+    {{form.as_p}}<br><br>
+  <input class="btn btn-primary" type="submit" name="" value="submit">
+</form>
+
+{% endblock %}

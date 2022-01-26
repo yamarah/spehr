@@ -1,0 +1,67 @@
+{% extends 'base.html'  %}
+{% load static %}
+
+
+{% block content %}
+<h2>List of Empolyee</h2>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Father Name</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Create At</th>
+        <th scope="col">Created By</th>
+        <th scope="col">Id card No</th>
+        <th scope="col">Volume No</th>
+        <th scope="col">Page No</th>
+        <th scope="col">ID scan</th>
+        <th scope="col">All Contacts</th>
+        <th scope="col">Empolyee Photo</th>
+        <th scope="col">Action</th>
+
+
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for  empol in em %}
+
+      <tr>
+        <td>{{empol.count}}</td>
+        <th scope="row">  <a href="{% url 'spehr:emp_detail' slug=empol.slug %}">{{empol.full_name}}</a></th>
+
+
+        <td>{{empol.father_name}}</td>
+        <td>{{empol.designation}}</td>
+        <td>{{empol.create_at}}</td>
+        <td>{{empol.created_by}}</td>
+        <td>{{empol.id_card_NO}}</td>
+        <td>{{empol.volume_NO}}</td>
+        <td>{{empol.page_NO}}</td>
+
+        <td><img src="{{empol.id_card_pic.url}}" width="50" height="50" alt=""></td>
+
+        <td>{{empol.all_contacts}}</td>
+        <td><img src="{{empol.emp_pic.url}}" alt="" width="50" height="50"></td>
+
+        <td>
+          <a href="{% url 'spehr:update' slug=empol.slug %}">Update</a><br>
+          <a href="{% url 'spehr:delete' slug=empol.slug %}">delete</a><br>
+
+        </td>
+
+
+
+      </tr>
+{%endfor%}
+    </tbody>
+  </table>
+  <button type="button" name="button"><a href="{% url 'spehr:export_users_csv' %}">Export</a></button>
+
+
+
+{% endblock %}

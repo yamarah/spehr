@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  {% for empolyee in empo.empolyees.all %}
+
+  {{empolyee.full_name}}
+  {{empolyee.father_name}}
+  {{empolyee.designation}}
+  {{empolyee.create_at}}
+  {{empolyee.created_by}}
+  {{empolyee.id_card_NO}}
+  {{empolyee.volume_NO}}
+  {{empolyee.page_NO}}
+  {{empolyee.id_card_pic}}
+  {{empolyee.all_contacts}}
+  {{empolyee.emp_pic}}<br>
+
+
+  <a href="{% url 'spehr:update' slug=empolyee.slug %}">Update</a><br>
+{%endfor%}
+{% endblock %}

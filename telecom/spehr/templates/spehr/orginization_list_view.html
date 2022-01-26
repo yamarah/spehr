@@ -1,0 +1,38 @@
+{% extends 'base.html'  %}
+
+
+{% block content %}
+
+    <!-- <a href="{{orginization.id}}">{{orginization.id}}</a>
+    <p>{{orginization.name}}</p> -->
+
+    <table class="table">
+      <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Orginzation Name </th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for orgini in orginization %}
+
+    
+    <tr>
+      <th scope="row">
+          <a href="{% url 'spehr:detail' slug=orgini.slug %}">{{orgini.name}}</a><br>
+
+        </th>
+    </tr>
+
+{% endfor %}
+  </tbody>
+
+</table>
+
+
+{% endblock %}
+
+
+
+<!--  -->
+<!-- {% url 'spehr:empolyee_detail' slug=orginization.slug %}" -->

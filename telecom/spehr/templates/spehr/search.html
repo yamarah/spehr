@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Search</title>
+{% endblock title %}
+{% block content %}
+<h1>Search Results</h1>
+
+<ul>
+  {% for city in object_list %}
+    <li>
+      {{ city.full_name }}, {{ city.father_name }}
+    </li>
+  {% endfor %}
+</ul>
+
+{% endblock content %}

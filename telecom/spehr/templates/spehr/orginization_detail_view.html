@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="{% url 'spehr:export_users_csv' %}">Export</a>
+<form action="{% url 'spehr:search' %}" method="get">
+  <input name="q" type="text" placeholder="Search...">
+  <input type="submit" name="" value="submit">
+</form>
+
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Father Name</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Create At</th>
+        <th scope="col">Created By</th>
+        <th scope="col">Id card No</th>
+        <th scope="col">Volume No</th>
+        <th scope="col">Page No</th>
+        <th scope="col">ID scan</th>
+        <th scope="col">All Contacts</th>
+        <th scope="col">Empolyee Photo</th>
+        <th scope="col">Action</th>
+
+
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for orn in orgin.empolyees.all %}
+
+      <tr>
+        
+        <th scope="row">{{orn.emp_id}}</th>
+        <td>{{orn.full_name}}</td>
+        <td>{{orn.father_name}}</td>
+        <td>{{orn.designation}}</td>
+        <td>{{orn.create_at}}</td>
+        <td>{{orn.created_by}}</td>
+        <td>{{orn.id_card_NO}}</td>
+        <td>{{orn.volume_NO}}</td>
+        <td>{{orn.page_NO}}</td>
+        <td><img src="{{orn.id_card_pic.url}}" width="50" height="50" alt=""></td>
+
+        <td>{{orn.all_contacts}}</td>
+        <td><img src="{{orn.emp_pic}}" alt="" width="50" height="50"></td>
+
+        <td>
+          <a href="{% url 'spehr:update' slug=orn.slug %}">Update</a><br>
+          <a href="{% url 'spehr:delete' slug=orn.slug %}">delete</a><br>
+
+        </td>
+
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<style >
+  .my-custom-scrollbar {
+    position: relative;
+    height: 500px;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+}
+</style>
+
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+<table class="table">
+
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Empolyee Name</th>
+      <th scope="col">GSM</th>
+      <th scope="col">Full Ismi</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for identify in identify %}
+    <a href="{% url 'spehr:identifydetail' slug=identify.slug %}"> </a>
+
+
+
+    <tr>
+      <th scope="row">{{identify.count.empolys.all}}</th>
+      <td>{{identify.empoly}}</td>
+      <td>{{identify.gsm}}</td>
+      <td>{{identify.full_ismi}}</td>
+
+
+
+    </tr>
+    {%endfor%}
+  </tbody>
+</table>
+</div>
+{% endblock%}

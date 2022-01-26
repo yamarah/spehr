@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>Delete {{empolyee.full_name}}?</h1>
+
+<form  method="post">
+  {% csrf_token %}
+  <input type="submit"  value="Delete">
+  <a href="{% url 'spehr:emp_detail' slug=empolyee.slug %}">Cancel</a>
+
+</form>
+
+{% endblock %}

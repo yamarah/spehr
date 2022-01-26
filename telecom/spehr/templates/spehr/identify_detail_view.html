@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{%block content %}
+
+{% for iden in iden.empolys.all %}
+{{iden.empoly}}
+{{iden.gsm}}
+{{iden.full_ismi}}
+{%endfor%}
+
+{% endblock %}

@@ -1,0 +1,124 @@
+h1{
+  color: blue;
+}
+
+h2{
+  color: red;
+  text-align: center;
+}
+
+
+#cc {
+
+  width: 50%;
+  padding: 8px 9px;
+  margin: 10px 0;
+  margin-left: 100px;
+  box-sizing: border-box
+}
+
+#ccc{
+  width: 50%;
+  padding: 8px 9px;
+  margin: 10px 0;
+  margin-left: 140px;
+  box-sizing: border-box;
+
+}
+
+#em1{
+  width: 40%;
+  padding: 8px 9px;
+  margin: 10px 0;
+  margin-left: 140px;
+  box-sizing: border-box;
+
+}
+#em2{
+  width: 40%;
+  padding: 8px 9px;
+  margin: 10px 0;
+  margin-left: 58px;
+  box-sizing: border-box;
+
+}
+#em3{
+  width: 40%;
+  padding: 8px 9px;
+  margin: 10px 0;
+  margin-left: 120px;
+  box-sizing: border-box;
+
+}
+#em4{
+  width: 40%;
+  padding: 8px 9px;
+  margin: 10px 0;
+  margin-left: 100px;
+  box-sizing: border-box;
+
+}
+#em5{
+  width: 40%;
+  padding: 8px 9px;
+  margin: 10px 0;
+  margin-left: 105px;
+  box-sizing: border-box;
+
+}
+#em6{
+  width: 40%;
+  padding: 8px 9px;
+  margin: 10px 0;
+  margin-left: 110px;
+  box-sizing: border-box;
+
+}
+#em7{
+  width: 40%;
+  padding: 8px 9px;
+  margin: 10px 0;
+  margin-left: 110px;
+  box-sizing: border-box;
+
+}
+#em8{
+  width: 40%;
+  padding: 8px 9px;
+  margin: 10px 0;
+  margin-left: 105px;
+  box-sizing: border-box;
+
+}
+
+#em9{
+  width: 40%;
+  padding: 8px 9px;
+  margin: 10px 0;
+  margin-left: 120px;
+  box-sizing: border-box;
+
+}
+#em10{
+  width: 40%;
+  padding: 8px 9px;
+  margin: 10px 0;
+  margin-left: 100px;
+  box-sizing: border-box;
+
+}
+div {
+  height: auto;
+  width: auto;
+}
+
+#sub{
+  background-color: #FF9F1C;
+  height: 60px;
+  width: 100px;
+  margin: 90px;
+  margin-left: 190px;
+  margin-top: 12px;
+  font-size: 1em;
+  border-radius: 20px;
+}
